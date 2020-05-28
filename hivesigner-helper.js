@@ -15,6 +15,10 @@ const client = new hivesigner.Client({
 	}
 })()
 
+function hs_helper_isUserSaved(){
+  setAccessToken()
+}
+
 function  hs_helper_login() {
 	params = {}
 	client.login(params, function(err, token) {

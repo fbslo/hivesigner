@@ -33,7 +33,7 @@ const client = new hivesigner.Client({
 
 ---
 
-***There is 13 functions available:***
+***There is 14 functions available:***
 
 ---
 
@@ -46,6 +46,13 @@ Login function will redirect user to HiveSigner.com and than back to callback UR
 `hs_helper_logout()`
 
 Logout will revoke access token and delete it from local storage.
+
+---
+
+`hs_helper_isUserSaved`
+
+If user is logged in, function returns true, if not, returns false.
+
 
 ---
 
