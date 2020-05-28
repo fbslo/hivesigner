@@ -16,7 +16,10 @@ Your app is now ready!
 
 To use helper file, include `hivesigner-helper.js` into your html file.
 
-`<script src="hivesigner-helper.js"></script>`
+```
+<script src="https://cdn.jsdelivr.net/npm/hivesigner"></script>
+<script src="hivesigner-helper.js"></script>
+```
 
 Edit the file and repace app, callbackURL and scope.
 
