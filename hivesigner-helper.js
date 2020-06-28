@@ -8,9 +8,9 @@ const client = new hivesigner.Client({
 //check if there is token in URL
 (function(){
 	let params = (new URL(location)).searchParams; //get access token from URL
-	const token = params.get('access_token') || localStorage.getItem('sc_token');
+	const token = params.get('access_token') || localStorage.getItem('hs_token');
 	if(token != '' && token != 'null' && token != null){
-		localStorage.setItem('sc_token', token); //store token to local storage
+		localStorage.setItem('hs_token', token); //store token to local storage
 		client.setAccessToken(token); //add token to client
 	}
 })()
@@ -30,14 +30,14 @@ function hs_helper_logout(){
 	client.revokeToken(function (err, res) {
 	  console.log(err, res)
 	});
-	localStorage.removeItem('sc_token');
+	localStorage.removeItem('hs_token');
 }
 
 function setAccessToken(){
 	let params = (new URL(location)).searchParams; //get access token from URL
-	const token = params.get('access_token') || localStorage.getItem('sc_token');
+	const token = params.get('access_token') || localStorage.getItem('hs_token');
 	if(token != '' && token != 'null' && token != null){
-		localStorage.setItem('sc_token', token); //store token to local storage
+		localStorage.setItem('hs_token', token); //store token to local storage
 		client.setAccessToken(token); //add token to client
 		return true;
 	} else {
